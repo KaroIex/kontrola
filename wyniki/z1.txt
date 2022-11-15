@@ -1,0 +1,539 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\Karol\Desktop\pierwszy> git clone https://github.com/KaroIex/kontrola
+Cloning into 'kontrola'...
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (4/4), done.
+PS C:\Users\Karol\Desktop\pierwszy> cd .\kontrola\
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> "" > smile.txt
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git add .\smile.txt
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git commit -m"Pierwszy commit"
+[main 2388f9d] Pierwszy commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 smile.txt
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 322 bytes | 322.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/KaroIex/kontrola
+   2bec696..2388f9d  main -> main
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> "Sara" > smile.txt
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git add .\smile.txt
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git commit -m"Zmiana (Sara)"
+[main 805d65b] Zmiana (Sara)
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> "" > jeden.txt
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> "" > dwa.txt
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git add .\jeden.txt .\dwa.txt
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git commit -m"Dodane pliki (JD)"
+[main b05ce91] Dodane pliki (JD)
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 dwa.txt
+ create mode 100644 jeden.txt
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 544 bytes | 544.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/KaroIex/kontrola
+   2388f9d..b05ce91  main -> main
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> cd ..
+PS C:\Users\Karol\Desktop\pierwszy> mkdir drugi
+
+
+    Directory: C:\Users\Karol\Desktop\pierwszy
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        15.11.2022     00:37                drugi
+
+
+PS C:\Users\Karol\Desktop\pierwszy> cd .\drugi\
+PS C:\Users\Karol\Desktop\pierwszy\drugi> git clone https://github.com/KaroIex/kontrola
+Cloning into 'kontrola'...
+remote: Enumerating objects: 12, done.
+remote: Counting objects: 100% (12/12), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 12 (delta 3), reused 7 (delta 1), pack-reused 0
+Receiving objects: 100% (12/12), done.
+Resolving deltas: 100% (3/3), done.
+PS C:\Users\Karol\Desktop\pierwszy\drugi> mkdir zdalne
+
+
+    Directory: C:\Users\Karol\Desktop\pierwszy\drugi
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        15.11.2022     00:38                zdalne
+
+
+PS C:\Users\Karol\Desktop\pierwszy\drugi> rmdir zdalne
+PS C:\Users\Karol\Desktop\pierwszy\drugi>
+
+
+                                          cd .\kontrola\
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> mkdir zdalne
+
+
+    Directory: C:\Users\Karol\Desktop\pierwszy\drugi\kontrola
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        15.11.2022     00:41                zdalne
+
+
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git remote -v > zdalne\repos.txt
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git add zdalne\repos.txt
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git commit -m"dodanie pliku zdalne\repos.txt"
+[main 3a47bff] dodanie pliku zdalne\repos.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 zdalne/repos.txt
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> cd ..
+PS C:\Users\Karol\Desktop\pierwszy\drugi> cd ..
+PS C:\Users\Karol\Desktop\pierwszy> cd .\kontrola\
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git pull
+Already up to date.
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> cd ..
+PS C:\Users\Karol\Desktop\pierwszy> cd .\drugi\kontrola\
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 421 bytes | 421.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/KaroIex/kontrola
+   b05ce91..3a47bff  main -> main
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> cd ..
+PS C:\Users\Karol\Desktop\pierwszy\drugi> cd ..
+PS C:\Users\Karol\Desktop\pierwszy> cd .\kontrola\
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 4 (delta 1), reused 4 (delta 1), pack-reused 0
+Unpacking objects: 100% (4/4), 401 bytes | 44.00 KiB/s, done.
+From https://github.com/KaroIex/kontrola
+   b05ce91..3a47bff  main       -> origin/main
+Updating b05ce91..3a47bff
+Fast-forward
+ zdalne/repos.txt | Bin 0 -> 208 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 zdalne/repos.txt
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> dir zdalne > zdalne\prepos.txt
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git add .\zdalne\prepos.txt
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git commit -m"dodanie pliku zdalne\prepos.txt"
+[main f85a7bf] dodanie pliku zdalne\prepos.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 zdalne/prepos.txt
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git push
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 564 bytes | 564.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/KaroIex/kontrola
+   3a47bff..f85a7bf  main -> main
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> cd ..
+PS C:\Users\Karol\Desktop\pierwszy> cd .\drugi\kontrola\
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git pull
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 1), reused 4 (delta 1), pack-reused 0
+Unpacking objects: 100% (4/4), 544 bytes | 49.00 KiB/s, done.
+From https://github.com/KaroIex/kontrola
+   3a47bff..f85a7bf  main       -> origin/main
+Updating 3a47bff..f85a7bf
+Fast-forward
+ zdalne/prepos.txt | Bin 0 -> 1226 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 zdalne/prepos.txt
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> "" > toignore.txt
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> "zawartość" > toignore.txt
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        toignore.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> "toignore.txt" > .\.gitignore
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        toignore.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git add .\.gitignore
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git commit -m"zmiana pliku gitignore"
+[main 55eea81] zmiana pliku gitignore
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 309 bytes | 309.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/KaroIex/kontrola
+   f85a7bf..55eea81  main -> main
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        toignore.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        if.txt
+        toignore.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        toignore.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> "toignore.txt" > toignore.txt
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        toignore.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git rm -r --cached .
+rm '.gitignore'
+rm 'README.md'
+rm 'dwa.txt'
+rm 'jeden.txt'
+rm 'smile.txt'
+rm 'zdalne/prepos.txt'
+rm 'zdalne/repos.txt'
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git add .
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git commit -m "fixed untracked files"
+[main 3ad9768] fixed untracked files
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 toignore.txt
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 327 bytes | 327.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/KaroIex/kontrola
+   55eea81..3ad9768  main -> main
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git add .
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git commit -m "aktualizacja gitignore"
+[main f2241bb] aktualizacja gitignore
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 toignore.txt
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 302 bytes | 302.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/KaroIex/kontrola
+   3ad9768..f2241bb  main -> main
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> "" > jeden.pdf
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> "" > dwa.txt
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> "" > trzy.png
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git add .
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> "" > dwa2.txt
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        dwa2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git add .
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   dwa2.txt
+
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git commit -m"Ignorowanie"
+[main 91afdc7] Ignorowanie
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 dwa2.txt
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> "" > test.png
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> "" > test.pdf
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git rm .\dwa.txt
+rm 'dwa.txt'
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    dwa.txt
+
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git commit -m"Usuwanie"
+[main f3b5adf] Usuwanie
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 dwa.txt
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> "linia1" > .\zdalne\merge.txt
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git add .\zdalne\merge.txt
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git commit -m"dodanie pliku merge.txt"
+[main a4b6909] dodanie pliku merge.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 zdalne/merge.txt
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> git push
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (8/8), 742 bytes | 742.00 KiB/s, done.
+Total 8 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+To https://github.com/KaroIex/kontrola
+   f2241bb..a4b6909  main -> main
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> cd ..
+PS C:\Users\Karol\Desktop\pierwszy\drugi> cd ..
+PS C:\Users\Karol\Desktop\pierwszy> cd .\drugi\kontrola\
+PS C:\Users\Karol\Desktop\pierwszy\drugi\kontrola> cd ..
+PS C:\Users\Karol\Desktop\pierwszy\drugi> cd ..
+PS C:\Users\Karol\Desktop\pierwszy> cd .\kontrola\
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> "linia1" > .\zdalne\merge2.txt
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git commit -m"nowy plik"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        zdalne/merge2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git add .\zdalne\merge2.txt
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git commit -m"nowy plik"
+[main 4f11d71] nowy plik
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 zdalne/merge2.txt
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git push
+To https://github.com/KaroIex/kontrola
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/KaroIex/kontrola'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git fetch
+remote: Enumerating objects: 20, done.
+remote: Counting objects: 100% (20/20), done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 17 (delta 5), reused 16 (delta 4), pack-reused 0
+Unpacking objects: 100% (17/17), 1.61 KiB | 35.00 KiB/s, done.
+From https://github.com/KaroIex/kontrola
+   f85a7bf..a4b6909  main       -> origin/main
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git push
+To https://github.com/KaroIex/kontrola
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/KaroIex/kontrola'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git pull
+error: Your local changes to the following files would be overwritten by merge:
+        .gitignore
+Please commit your changes or stash them before you merge.
+Aborting
+Merge with strategy ort failed.
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git fetch
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git fetch main
+fatal: 'main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git fetch origin main
+From https://github.com/KaroIex/kontrola
+ * branch            main       -> FETCH_HEAD
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git merge
+error: Your local changes to the following files would be overwritten by merge:
+        .gitignore
+Please commit your changes or stash them before you merge.
+Aborting
+Merge with strategy ort failed.
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git push
+To https://github.com/KaroIex/kontrola
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/KaroIex/kontrola'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git pull
+error: Your local changes to the following files would be overwritten by merge:
+        .gitignore
+Please commit your changes or stash them before you merge.
+Aborting
+Merge with strategy ort failed.
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git stash .\.gitignore
+fatal: subcommand wasn't specified; 'push' can't be assumed due to unexpected token '.\.gitignore'
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 6 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 6 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git restore .\.gitignore
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 6 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+nothing to commit, working tree clean
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git pull
+Merge made by the 'ort' strategy.
+ .gitignore          | 353 +---------------------------------------------------
+ dwa.txt => dwa2.txt | Bin
+ zdalne/merge.txt    | Bin 0 -> 18 bytes
+ 3 files changed, 3 insertions(+), 350 deletions(-)
+ rename dwa.txt => dwa2.txt (100%)
+ create mode 100644 zdalne/merge.txt
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git push
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 608 bytes | 608.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To https://github.com/KaroIex/kontrola
+   a4b6909..8db155c  main -> main
+PS C:\Users\Karol\Desktop\pierwszy\kontrola> git pull
+Already up to date.
+PS C:\Users\Karol\Desktop\pierwszy\kontrola>
