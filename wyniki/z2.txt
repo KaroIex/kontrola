@@ -1,0 +1,524 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\Karol\Desktop\kontrola> git clone https://github.com/KaroIex/kontrola
+Cloning into 'kontrola'...
+remote: Enumerating objects: 47, done.
+remote: Counting objects: 100% (47/47), done.
+remote: Compressing objects: 100% (29/29), done.
+remote: Total 47 (delta 16), reused 37 (delta 9), pack-reused 0
+Receiving objects: 100% (47/47), 10.00 KiB | 1.25 MiB/s, done.
+Resolving deltas: 100% (16/16), done.
+PS C:\Users\Karol\Desktop\kontrola> cd .\kontrola\
+PS C:\Users\Karol\Desktop\kontrola\kontrola> dir
+
+
+    Directory: C:\Users\Karol\Desktop\kontrola\kontrola
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        15.11.2022     01:23                wyniki
+d-----        15.11.2022     01:23                zdalne
+-a----        15.11.2022     01:23             24 .gitignore
+-a----        15.11.2022     01:23              6 dwa2.txt
+-a----        15.11.2022     01:23              6 jeden.txt
+-a----        15.11.2022     01:23             10 README.md
+-a----        15.11.2022     01:23             14 smile.txt
+
+
+PS C:\Users\Karol\Desktop\kontrola\kontrola>
+PS C:\Users\Karol\Desktop\kontrola\kontrola> "*csv" > .\.gitignore
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git commit -m"Zadanie do wykładu 4. -start"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git commit -m"Zadanie do wykładu 4. -start"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git add .
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git commit -m"Zadanie do wykładu 4. -start"
+[main 7092071] Zadanie do wykładu 4. -start
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git branch
+* main
+PS C:\Users\Karol\Desktop\kontrola\kontrola> "ABC" > mbran.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git add .\mbran.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git commit -m"mbran"
+[main c44d263] mbran
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 mbran.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout -b alfa
+Switched to a new branch 'alfa'
+PS C:\Users\Karol\Desktop\kontrola\kontrola> "DEF" >> mbran.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git add .\mbran.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git commit -m"DEF na alfa"
+[alfa f5d5da6] DEF na alfa
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+PS C:\Users\Karol\Desktop\kontrola\kontrola> "GHI" >> mbran.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout alfa
+error: Your local changes to the following files would be overwritten by checkout:
+        mbran.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+PS C:\Users\Karol\Desktop\kontrola\kontrola> "ABC" >> mbran.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout alfa
+error: Your local changes to the following files would be overwritten by checkout:
+        mbran.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git branch
+  alfa
+* main
+PS C:\Users\Karol\Desktop\kontrola\kontrola> "ABC" > mbran.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout alfa
+Switched to branch 'alfa'
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git merge -no-ff alfa
+error: did you mean `--no-ff` (with two dashes)?
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git merge --no-ff alfa
+Already up to date.
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git branch
+* alfa
+  main
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git branch
+  alfa
+* main
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout main
+Already on 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git merge --no-ff alfa
+Merge made by the 'ort' strategy.
+ mbran.txt | Bin 12 -> 22 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git branch
+  alfa
+* main
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout main
+Already on 'main'
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout alfa
+Switched to branch 'alfa'
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git merge --no-ff main
+Merge made by the 'ort' strategy.
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git merge --no-ff alfa
+Merge made by the 'ort' strategy.
+PS C:\Users\Karol\Desktop\kontrola\kontrola> "GHI" > .\mbran.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git add .
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git commit -m"GHI"
+[main edc29aa] GHI
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout alfa
+Switched to branch 'alfa'
+PS C:\Users\Karol\Desktop\kontrola\kontrola> "GHI" > abran.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git add .
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git commit -m"aGHI"
+[alfa c75d983] aGHI
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 abran.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout merge
+error: pathspec 'merge' did not match any file(s) known to git
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 7 commits.
+  (use "git push" to publish your local commits)
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git merge alfa -m"mergeGHI"
+Merge made by the 'ort' strategy.
+ abran.txt | Bin 0 -> 12 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 abran.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> "JKL" > .\mbran.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git add .
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git commit -m"JKL"
+[main 5897daf] JKL
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout alfa
+Switched to branch 'alfa'
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git add .
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git commit -m"aMNO"
+[alfa 7366119] aMNO
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 10 commits.
+  (use "git push" to publish your local commits)
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git merge --no-ff alfa -m"mergeMNO"
+warning: Cannot merge binary files: mbran.txt (HEAD vs. alfa)
+Auto-merging mbran.txt
+CONFLICT (content): Merge conflict in mbran.txt
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git merge --no-ff alfa
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout alfa
+error: you need to resolve your current index first
+mbran.txt: needs merge
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git branch
+  alfa
+* main
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git merge --no-ff alfa
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git status
+On branch main
+Your branch is ahead of 'origin/main' by 10 commits.
+  (use "git push" to publish your local commits)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   mbran.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git add .
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git commit -m"konflikt"
+[main e2017b6] konflikt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git merge --no-ff alfa -m"mergeMNO"
+Already up to date.
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout alfa
+Switched to branch 'alfa'
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 12 commits.
+  (use "git push" to publish your local commits)
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git merge --no-ff alfa
+Already up to date.
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git merge alfa
+Already up to date.
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout main
+Already on 'main'
+Your branch is ahead of 'origin/main' by 12 commits.
+  (use "git push" to publish your local commits)
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git history
+git: 'history' is not a git command. See 'git --help'.
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git log
+commit e2017b65bac5e6882b9dbd9a314169dcbdd72395 (HEAD -> main)
+Merge: 5897daf 7366119
+Author: KaroIex <karolkula11@gmail.com>
+Date:   Tue Nov 15 01:52:57 2022 +0100
+
+    konflikt
+
+commit 7366119464e4b0718835e78e7dae485d6ea64c39 (alfa)
+Author: KaroIex <karolkula11@gmail.com>
+Date:   Tue Nov 15 01:48:43 2022 +0100
+
+    aMNO
+
+commit 5897daf1b0368d5c615fc683eefee14aa1ef19f3
+Author: KaroIex <karolkula11@gmail.com>
+Date:   Tue Nov 15 01:47:15 2022 +0100
+
+    JKL
+
+commit 14920edffc2b981564c63640255250fb57d554ba
+Merge: edc29aa c75d983
+Author: KaroIex <karolkula11@gmail.com>
+Date:   Tue Nov 15 01:45:41 2022 +0100
+
+    mergeGHI
+
+commit c75d983f13ff4db72cae11253fb31bb477f379b2
+Author: KaroIex <karolkula11@gmail.com>
+Date:   Tue Nov 15 01:44:28 2022 +0100
+
+    aGHI
+
+PS C:\Users\Karol\Desktop\kontrola\kontrola>
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git log > moneline.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git add .
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git commit -m"moneline"
+[main 5f45f56] moneline
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 moneline.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout alfa
+Switched to branch 'alfa'
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git log > aoneline.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git add .
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git commit -m"aoneline"
+[alfa 2fa5fd0] aoneline
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 aoneline.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout -b beta
+Switched to a new branch 'beta'
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 13 commits.
+  (use "git push" to publish your local commits)
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git log --oneline > moneline.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout alfa
+error: Your local changes to the following files would be overwritten by checkout:
+        moneline.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git branch
+  alfa
+  beta
+* main
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git add .
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git commit -m"moneline"
+[main 02ec5ec] moneline
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout alfa
+Switched to branch 'alfa'
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git log --oneline > aoneline.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git add .
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git commit -m"aoneline"
+[alfa 0bebebb] aoneline
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout beta
+Switched to branch 'beta'
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git log --graph
+* commit 2fa5fd06a365e07002768b07c76d77711f72f0e7 (HEAD -> beta)
+| Author: KaroIex <karolkula11@gmail.com>
+| Date:   Tue Nov 15 01:58:40 2022 +0100
+|
+|     aoneline
+|
+* commit 7366119464e4b0718835e78e7dae485d6ea64c39
+| Author: KaroIex <karolkula11@gmail.com>
+| Date:   Tue Nov 15 01:48:43 2022 +0100
+|
+|     aMNO
+|
+* commit c75d983f13ff4db72cae11253fb31bb477f379b2
+| Author: KaroIex <karolkula11@gmail.com>
+| Date:   Tue Nov 15 01:44:28 2022 +0100
+|
+|     aGHI
+|
+*   commit 265a406d5ae3d53a1ba03e317d64f2f80dde4d6b
+|\  Merge: f5d5da6 432e90d
+| | Author: KaroIex <karolkula11@gmail.com>
+| | Date:   Tue Nov 15 01:40:51 2022 +0100
+| |
+| |     Merge branch 'main' into alfa
+| |
+| *   commit 432e90db1cca64879b2925e600da250429955417
+| |\  Merge: c44d263 f5d5da6
+| |/  Author: KaroIex <karolkula11@gmail.com>
+|/|   Date:   Tue Nov 15 01:38:25 2022 +0100
+| |
+| |       Merge branch 'alfa'
+| |
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git log --graph > graph.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git add .
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git commit -m"graph"
+[beta 67d5f20] graph
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 graph.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout -b gamma
+Switched to a new branch 'gamma'
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git log --graph --all --decorate > dgraph.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git add .
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git commi -m "dgraph"
+git: 'commi' is not a git command. See 'git --help'.
+
+The most similar commands are
+        commit
+        column
+        config
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git commit -m "dgraph"
+[gamma c19dfc9] dgraph
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 dgraph.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout alfa
+Switched to branch 'alfa'
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git branch --list
+* alfa
+  beta
+  gamma
+  main
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git branch --list > branches.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git add .
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git commit -m"dodanie listy gałęzi"
+[alfa c1eb627] dodanie listy gałęzi
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 branches.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git merge --no-ff gamma
+Merge made by the 'ort' strategy.
+ dgraph.txt | Bin 0 -> 11818 bytes
+ graph.txt  | Bin 0 -> 8324 bytes
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 dgraph.txt
+ create mode 100644 graph.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git branch -d gamma
+Deleted branch gamma (was c19dfc9).
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 14 commits.
+  (use "git push" to publish your local commits)
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git merge --no-ff beta
+Merge made by the 'ort' strategy.
+ aoneline.txt | Bin 0 -> 7164 bytes
+ graph.txt    | Bin 0 -> 8324 bytes
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 aoneline.txt
+ create mode 100644 graph.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git branch -d beta
+Deleted branch beta (was 67d5f20).
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git diff alfa
+diff --git a/aoneline.txt b/aoneline.txt
+index 23f1b3c..dc2cdbc 100644
+Binary files a/aoneline.txt and b/aoneline.txt differ
+diff --git a/branches.txt b/branches.txt
+deleted file mode 100644
+index 313ab8a..0000000
+Binary files a/branches.txt and /dev/null differ
+diff --git a/dgraph.txt b/dgraph.txt
+deleted file mode 100644
+index f017b0c..0000000
+Binary files a/dgraph.txt and /dev/null differ
+diff --git a/mbran.txt b/mbran.txt
+index 4acbf33..23e5bce 100644
+Binary files a/mbran.txt and b/mbran.txt differ
+diff --git a/moneline.txt b/moneline.txt
+new file mode 100644
+index 0000000..8f27f60
+Binary files /dev/null and b/moneline.txt differ
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git diff
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git diff main
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git diff alfa > diff.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git add .
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git commit-m"amdiff"
+git: 'commit-mamdiff' is not a git command. See 'git --help'.
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git commit -m"amdiff"
+[main 053c0f8] amdiff
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 diff.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git branch
+  alfa
+* main
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git log --graph --all --decorated >> dgraph.txt
+fatal: unrecognized argument: --decorated
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git log --graph --all --decorate >> dgraph.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git add .
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git commit -m"amgraph"
+[main f1ba683] amgraph
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 dgraph.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout alfa
+Switched to branch 'alfa'
+PS C:\Users\Karol\Desktop\kontrola\kontrola> "ALFA" > .\mbran.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git add .
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git commit -m"ALFA"
+[alfa d135321] ALFA
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 19 commits.
+  (use "git push" to publish your local commits)
+PS C:\Users\Karol\Desktop\kontrola\kontrola> "MASTER" > .\mbran.txt
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git add .
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git commit -m"MASTER"
+[main db0e19d] MASTER
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git merge --no-ff alfa
+warning: Cannot merge binary files: dgraph.txt (HEAD vs. alfa)
+Auto-merging dgraph.txt
+CONFLICT (add/add): Merge conflict in dgraph.txt
+warning: Cannot merge binary files: mbran.txt (HEAD vs. alfa)
+Auto-merging mbran.txt
+CONFLICT (content): Merge conflict in mbran.txt
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git merge --no-ff alfa -m"mergeMA"
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git status
+On branch main
+Your branch is ahead of 'origin/main' by 20 commits.
+  (use "git push" to publish your local commits)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+        modified:   aoneline.txt
+        new file:   branches.txt
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both added:      dgraph.txt
+        both modified:   mbran.txt
+
+PS C:\Users\Karol\Desktop\kontrola\kontrola>  git add .
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git status
+On branch main
+Your branch is ahead of 'origin/main' by 20 commits.
+  (use "git push" to publish your local commits)
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   aoneline.txt
+        new file:   branches.txt
+
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git merge --no-ff alfa -m"mergeMA"
+fatal: You have not concluded your merge (MERGE_HEAD exists).
+Please, commit your changes before you merge.
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git commit -m"konflikt2"
+[main 687ec6f] konflikt2
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git merge --no-ff alfa -m"mergeMA"
+Already up to date.
+PS C:\Users\Karol\Desktop\kontrola\kontrola> git push
+Enumerating objects: 67, done.
+Counting objects: 100% (67/67), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (57/57), done.
+Writing objects: 100% (65/65), 9.73 KiB | 1.95 MiB/s, done.
+Total 65 (delta 31), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (31/31), done.
+To https://github.com/KaroIex/kontrola
+   c1b8644..687ec6f  main -> main
+PS C:\Users\Karol\Desktop\kontrola\kontrola>
